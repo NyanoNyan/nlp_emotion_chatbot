@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Chat bot </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+ <div class="login">
+  <h1 class="header-main">Chat bot</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="review" placeholder="review" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Emotion</button>
+    </form>
+
+   <br>
+   <br>
+
+   
+
+   <p style="font-size: 20px;">{{ prediction_text }}</p>
+
+   <p style="color: black">{{ sentiment }}</p>
+
+   <p style="font-size: 16px;"> {{ text }} </p>
+
+ </div>
+
+
+</body>
+</html>
