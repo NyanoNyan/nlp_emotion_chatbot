@@ -2,19 +2,117 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Chat bot </title>
+  <title>MOODFLUENT </title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
+
+<style>
+  body {margin:0;}
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size:x-large;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px 28px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #6dd6a7; 
+  }
+  </style>
+
+<header>
+  <ul>
+      <li><a class="active" href="#signin">Sign In</a></li>
+      <li><a href="#myjournals">My Journals</a></li>
+      <li><a href="#helplines">Helplines</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+    <br><br>
+    <div>
+        
+      <div class="welcome">
+      
+      <img class="letterm" src="/static/css/moodfluent.png">
+
+      <h1 class="MOODFLUENT">Welcome to MOODFLUENT</h1>
+      <br><br>
+  </div>  
+      
+</header>
+
+
 <body>
+
+
+  <div class="logo">
+    <img src="/static/css/logo.png">
+</div>
+
+<div class="intro">
+    <p>
+        When you were a teenager, you might have kept a diary hidden under your mattress. 
+        It was a place to confess your struggles and fears without judgment or punishment. 
+        It likely felt good to get all of those thoughts and feelings out of your head and down on paper. 
+        The world seemed clearer.
+        <br><br>
+        You may have stopped using a diary once you reached adulthood. But the concept and its benefits still apply. 
+        Now it’s called journaling. It's simply writing down your thoughts and feelings to understand them more clearly. 
+        And if you struggle with stress, depression, or anxiety, keeping a journal is a great idea. 
+        It can help you gain control of your emotions and improve your mental health. 
+        <br><br>
+        MOODFLUENT will help you take another step further and suggest supplementary wellbeing techniques to practice when you're feeling low.  
+    </p>
+</div>
+
+<!-- Form section -->
+
+<div class="details">
+  <form>
+      <label for="name"><h1 class="header-main">Name:</h1></label><br>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="date"><h1 class="header-main">What's the date for today's entry?</h1></label><br>
+      <input type="date" id="date" name="date"><br><br>
+      
+  </form>
+</div>
+
+<!-- Nyona code -->
+
  <div class="login">
-  <h1 class="header-main">Chat bot</h1>
+  <h1 class="header-main">How was your day?</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="review" placeholder="review" required="required" />
+    	<input type="text" class="entry" name="review" placeholder="Write to your heart's content..." required="required" /><br><br>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Emotion</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit Journal Entry</button>
     </form>
 
    <br>

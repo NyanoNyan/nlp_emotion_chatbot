@@ -1,3 +1,154 @@
 .header-main {
     color: blue;
 }
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(236, 235, 233);
+    font-family: 'Quicksand', sans-serif; 
+}
+
+header {
+    width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+    
+    
+  }
+  
+  /* NAV BAR */
+  #nav_bar {
+    
+    font-size: x-large;
+  }
+  
+  .nav-links #wellbeing {
+    margin-left: 0px;
+  
+  }
+  
+  #nav_bar li {
+    display: inline-block;
+    padding: 0px 8px 8px 0px;
+    
+  }
+  
+  #nav_bar #sign_in {
+    background: #469109; 
+    margin-right: 25px;
+    padding: 7px 15px;
+    border-radius: 3px; 
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    color: #3a691b;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  li.nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  #sign_in:hover { 
+    box-shadow: 1px 1px 5px #999;
+  }
+  
+  #sign_in {
+    color: #fff;
+  }
+
+hr {
+    color:rgb(66, 66, 65);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.welcome {
+  background-color: #6dd6a7;
+  padding-top: 50px;
+  
+}
+
+.letterm {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+.moodfluent {
+  color:rgb(236, 235, 233); 
+}
+
+.logo {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.intro {
+    text-align: justify;
+    margin: 40px;
+    line-height: 35px;
+    font-size:larger;
+}
+
+.header-main {
+    color: #6dd6a7;
+}
+
+
+.details {
+    font-size: 20px;
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+}
+
+
+
+.details #entry {
+    padding-bottom: 150px;
+}
+
+.login {
+  text-align: center;
+  
+}
+
+.entry {
+  padding-bottom: 150px;
+}
+
+.btn {
+  padding: 20px;
+}
+
+
+
+
