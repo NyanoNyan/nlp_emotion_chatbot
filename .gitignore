@@ -5,3 +5,4 @@ venv
 *.pyc
 .DS_Store
 .env
+old_models
